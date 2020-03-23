@@ -1,4 +1,6 @@
-input{
-    height: 50px;
+.range{
     width: 100px;
+}
+span{
+    font-weight: bold;
 }

@@ -1,1 +1,1 @@
-$(function(){var t,e=$("input"),n=6;t=setInterval(function(){0===--n?(clearInterval(t),e.val("同意"),e.removeAttr("disabled")):e.val("同意("+n+"s)")},1e3),e.click(function(){alert("就知道你会同意的")})});
+$(function(){var n=$("#range"),a=$("#age");n.change(function(){a.html(n.val())})});
