@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="./timer-button.css">
 </head>
 <body>
+    <label>时长：</label>
+    <input id="number" type="number" min="0" max="100" value="5" autofocus>秒
     <!-- <input type="button" value="同意(6s)" disabled/> -->
+    <br/>
     <input id="add" type="button" value="添加定时器按钮"/>
     <hr>
     <div id="main">
@@ -18,16 +21,16 @@
     <script>
         $(function() {
             var $btnAdd = $('#add');
-
+            console.log($('#number').val())
             $btnAdd.click(function(){
                 $timerButton.show({
-                    num:6,
+                    num:Number($('#number').val()),
                     title:'发送短信验证码',
                     onClick:function(){
                         console.log('点击了计时器按钮')
                     }
                 })
-                // console.log('add tiemr button')
+               
             })
         });
     </script>

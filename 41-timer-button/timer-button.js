@@ -16,9 +16,12 @@ var $timerButton= (function() {
       num=cfg.num;
       $btn.val(cfg.title+'('+num+'s)');
       // 2.event bind
+      if(timer){
+        clearInterval(timer);
+      }
       timer = setInterval(function(){
         num--;
-        if(num===0){
+        if(num===-1){
           clearInterval(timer);
           $btn.val('发送短信验证码');
           $btn.removeAttr('disabled');
