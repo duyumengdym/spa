@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "indent": [
+            "error",
+            2,
+            { "VariableDeclarator": 2 }
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "no-undef": [0],
+        "no-unused-vars": [0, { 
+            // 允许声明未使用变量
+            "vars": "local",
+            // 参数不检查
+            "args": "none" 
+          }],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
